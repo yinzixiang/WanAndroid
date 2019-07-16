@@ -1,0 +1,22 @@
+<view class="container">
+    <view class="home-list">
+       <block wx:for="{{listData}}" wx:key="{{item.id}}">
+          <view class="list" bindtap="toIndexDetail" data-link="{{item.link}}">
+             <view class="list-row">
+                <view class="list-name">{{item.author}}</view>
+                <view class="list-time">{{item.niceDate}}</view>
+             </view>
+             
+             <view class="list-row" wx:if="{{item.envelopePic.length>0}}">
+                <image class="list-image" src="{{item.envelopePic}}" >
+                </image>
+             </view>
+
+             <view class="list-content">{{item.title}}</view>
+             <view class="list-row">
+                  <view class="list-chapterName">{{item.chapterName}}</view>
+             </view>
+          </view>
+       </block>
+    </view>
+</view>

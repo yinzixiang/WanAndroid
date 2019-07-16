@@ -1,0 +1,36 @@
+.container{
+    padding: 0;
+    margin: 0;
+}
+.login{
+    width: 100%;
+    margin-top: 100rpx;
+    display: flex;
+    flex-direction: column
+}
+.row{
+    position: relative;
+    width: 100%;
+    height: 100rpx;
+    margin-bottom: 20rpx;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+.input{
+    position: absolute;
+    left: 50rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+}
+
+.button-login{
+    width: 200rpx;
+}
+.loginImg{
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    left: 0;
+    top: 25rpx;
+}
+

@@ -1,0 +1,32 @@
+<view class="container">
+
+    <!-- tab导航栏 -->
+    <scroll-view class="nav" scroll-x="true" scroll-with-animation="true" scroll-left="{{navScrollLeft}}">
+        <block wx:for="{{knowledgesystemTabItem}}"  wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+            <view class="nav-item {{currentTab==idx?'active':''}}" data-current="{{idx}}" data-cid="{{navItem.id}}" bindtap="switchTab">{{navItem.name}}</view>
+        </block>
+    </scroll-view>
+   
+
+   <!-- tab切换对应页面内容 -->
+    <view class="item-box">
+        <view class="item-list" wx:for="{{knowledgesystemItemList}}" wx:for-item="tabItemList" wx:for-index="idx" wx:key="idx" data-link="{{tabItemList.link}}" bindtap="itemListToDetail">
+                    <view class="item-row">
+                        <view class="author">{{tabItemList.author}}</view>
+                        <view class="time">{{tabItemList.niceDate}}</view>
+                    </view>
+
+                    <view class="item-row">
+                        <view class="title">{{tabItemList.title}}</view>
+                    </view>
+
+                     <view class="item-row">
+                         <view class="chapter-name">{{tabItemList.superChapterName}}/{{tabItemList.chapterName}}</view>
+                    </view>
+                   
+            </view>
+      
+   </view>
+           
+
+</view>

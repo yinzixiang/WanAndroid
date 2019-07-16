@@ -1,0 +1,18 @@
+<view class="caregory">
+    <view class="nav-left"  >
+        <block wx:for="{{navLeftItems}}" wx:key="{{index}}">
+            <view class="nav-left-items {{currentItem==index?'active':''}}" data-index="{{index}}" bindtap="changeItem">{{item.name}}</view>
+        </block>
+    </view>
+
+    <view class="nav-right">
+        <view class="nav-right-title">{{title}}</view>
+        <view class="nav-right-items">
+           <block wx:for="{{navRightItems}}" wx:key="{{index}}">
+             <view class="items-title" style="color :{{textColorArr[index]}}" bindtap="toDetail" data-link="{{item.link}}">{{item.title}}</view>
+           </block>
+        </view>
+       
+    </view>
+   
+</view>

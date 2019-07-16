@@ -1,0 +1,15 @@
+<view class="container">
+    <view class="login">
+        <view class="row">
+            <image class="loginImg" src="../../../images/username.png">
+            </image>
+            <input class='input' type="" placeholder="请输入账号" bindinput="inputUserName" />
+        </view>
+        <view class="row">
+            <image class="loginImg" src="../../../images/password.png">
+            </image>
+            <input class='input' type="" placeholder="请输入密码" bindinput="inputPassword" />
+        </view>
+    </view>
+    <button  class='button-login' bindtap="login">登录</button>
+</view>

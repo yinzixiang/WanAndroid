@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/person/person",
+    "pages/index/index",
+    
+    "pages/navigation/navigation",
+    "pages/knowledgesystem/knowledgesystem",
+    "pages/knowledgesystem/knowledgesystemdetail/knowledgesystemdetail",
+    "pages/index/indexdetail/indexdetail",
+    "pages/person/login/login",
+    "pages/person/register/register",
+    "pages/person/myCollection/myCollection"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#276692",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh" : true
+  },
+  "tabBar":{
+     "list":[
+        {
+          "pagePath":"pages/index/index",
+          "text":"首页",
+          "iconPath":"images/homepage.png",
+          "selectedIconPath":"images/homepage_fill.png"
+        },
+        {
+          "pagePath":"pages/knowledgesystem/knowledgesystem",
+          "text":"知识系统",
+          "iconPath":"images/activity.png",
+          "selectedIconPath":"images/activity_fill.png"
+        },
+        {
+          "pagePath":"pages/navigation/navigation",
+          "text":"导航",
+          "iconPath":"images/createtask.png",
+          "selectedIconPath":"images/createtask_fill.png"
+        },
+        {
+          "pagePath":"pages/person/person",
+          "text":"个人中心",
+          "iconPath":"images/people.png",
+          "selectedIconPath":"images/people_fill.png"
+        }
+     ],
+     "selectedColor":"#279CF5" 
+  },
+  "sitemapLocation": "sitemap.json"
+}

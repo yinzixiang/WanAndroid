@@ -1,0 +1,49 @@
+<view class="container">
+    <view class="personCenter" wx:if="{{isLoginRegister}}">
+        <view class="person-row">
+            <image class="personImg" src="../../images/no_avatar.png">
+            </image>
+         </view>
+         <view class="person-row">
+            <p class="personName">未登录</p>
+        </view>
+        <view class="person-row" id="loginRegisterBtn">
+            <p class="btn" bindtap="toLogin">登录</p>
+            <p class="btn" bindtap="toRegister">注册</p>
+        </view>
+       
+    </view>
+
+
+    <view class="personCenter" wx:if="{{!isLoginRegister}}">
+        <view class="person-row">
+            <image class="personImg" src="../../images/avatar.png">
+                
+            </image>
+        </view>
+        <view class="person-row">
+            <p class="personName">我的名称：{{personName}}</p>
+        </view>
+
+        <view class="personItem">
+            <view class="itemRow">
+                <p class="myCollection" bindtap="myCollection">
+                    我的收藏
+                </p>
+            </view>
+
+            <view class="itemRow">
+                <p class="aboutUs">
+                    关于我们
+                </p>
+            </view>
+
+            <view class="itemRow">
+                <p class="exitLogin"  bindtap="exitLogin">
+                    退出登录
+                </p>
+            </view>
+        </view>
+       
+    </view>
+</view>

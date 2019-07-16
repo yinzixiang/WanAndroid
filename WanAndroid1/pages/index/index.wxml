@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="home-banner">
+      <swiper class="home-swiper" indicator-dots="false" indicator-color="rgba(0,0,0,.3)" autoplay="true" interval="2000" duration="1000" circular="{{true}}">
+         <block wx:for="{{bannerImages}}" wx:key="{{item.imagePath}}">
+            <swiper-item>
+                <image class="home-img" src="{{item.imagePath}}" data-url="{{item.url}}" bindtap="imgToDetail">
+                </image>
+            </swiper-item>
+         </block>
+      </swiper>
+        
+    </view>
+
+    <view class="home-list">
+       <block wx:for="{{listData}}" wx:key="{{item.id}}">
+          <view class="list" bindtap="toIndexDetail" data-link="{{item.link}}">
+             <view class="list-row">
+                <view class="list-name">{{item.author}}</view>
+                <view class="list-time">{{item.niceDate}}</view>
+             </view>
+             
+             <view class="list-row" wx:if="{{item.envelopePic.length>0}}">
+                <image class="list-image" src="{{item.envelopePic}}" >
+                </image>
+             </view>
+
+             <view class="list-content">{{item.title}}</view>
+             <view class="list-row">
+                  <view class="list-chapterName">{{item.chapterName}}</view>
+                  <image class="list-collection" wx:if="{{item.collect}}" src="../../images/home_collect_yes.png" catchtap="onCollectionTap" data-id="{{item.id}}" data-collect="{{item.collect}}" data-index="{{index}}"></image>
+                  <image class="list-collection" wx:else src="../../images/home_collect_no.png" catchtap="onCollectionTap" catchtap="onCollectionTap" data-id="{{item.id}}" data-collect="{{item.collect}}" data-index="{{index}}"></image>
+             </view>
+          </view>
+       </block>
+    </view>
+</view>

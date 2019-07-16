@@ -1,0 +1,54 @@
+.container{
+    margin: 0;
+    padding: 0;
+}
+
+.personCenter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.person-row{
+    display: inline;
+    width: 100%;
+    text-align: center;
+}
+.personImg{
+    width: 200rpx;
+    height: 200rpx;
+}
+.personName{
+    font-size: 28rpx;
+}
+
+
+.personItem{
+    width: 100%;
+    margin-top: 100rpx;
+    display:flex;
+    flex-direction:column;
+
+}
+.itemRow{
+    border: 1px solid #cccccc;
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 30rpx;
+}
+
+#loginRegisterBtn{
+    margin-top: 100rpx;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.btn{
+    width: 50%;
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 30rpx;
+    display: inline;
+    border: 1px solid #cccccc
+}
